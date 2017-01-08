@@ -7,16 +7,16 @@ require "okuribito_db/version"
 Gem::Specification.new do |s|
   s.name        = "okuribito_db"
   s.version     = OkuribitoDb::VERSION
-  s.authors     = ["ym"]
-  s.email       = ["kiyoshi.kodama@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of OkuribitoDb."
-  s.description = "TODO: Description of OkuribitoDb."
+  s.authors     = ["Yasuhiro Matsumura"]
+  s.email       = ["ym.contributor@gmail.com"]
+  s.homepage    = "https://github.com/muramurasan/okuribito_db"
+  s.summary     = "OkuribitoDB is a Rails Engine that monitors table size and number of rows in database. Let's extract unused tables."
+  s.description = "OkuribitoDB is a Rails Engine that monitors table size and number of rows in database. Let's extract unused tables."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency "rails", ">= 4.0.0"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "mysql2"
 end
