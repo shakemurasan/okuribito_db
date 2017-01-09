@@ -1,6 +1,7 @@
 class CreateOkuribitoDbTableInfos < ActiveRecord::Migration
   def change
     create_table :okuribito_db_table_infos do |t|
+      t.integer :db_info_id, null: false
       t.string :table_name, null: false
       t.integer :table_rows, null: false
       t.integer :avg_row_length, null: false

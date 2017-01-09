@@ -1,0 +1,37 @@
+<table class="db_info">
+  <tbody>
+  <tr>
+    <th rowspan="2">Table Name</th>
+    <% @db_infos.each do |db_info| %>
+      <th colspan="3"><%= db_info.created_at %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @db_info_ids.each do %>
+      <th>rows</th>
+      <th>avg_len</th>
+      <th>sum_len</th>
+    <% end %>
+  </tr>
+  <% @table_infos.each do |table_name, table_info_row| %>
+    <% i = 0 %>
+    <tr>
+      <td>
+        <%= table_name %>
+      </td>
+    <% table_info_row.each do |table_info| %>
+      <% if @db_info_ids[i] == table_info.db_info_id %>
+        <td><%= table_info.table_rows %></td>
+        <td><%= table_info.avg_row_length %></td>
+        <td><%= table_info.total_data_length %></td>
+      <% else %>
+        <td></td>
+        <td></td>
+        <td></td>
+      <% end %>
+      <% i += 1 %>
+    <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

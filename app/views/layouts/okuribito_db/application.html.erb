@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Okuribito db</title>
+  <title>OkuribitoDB</title>
   <%= stylesheet_link_tag    "okuribito_db/application", media: "all" %>
   <%= javascript_include_tag "okuribito_db/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/okuribito_db/header' %>
+<div class="main">
+  <%= yield %>
+</div>
 
 </body>
 </html>
