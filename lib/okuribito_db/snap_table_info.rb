@@ -1,6 +1,12 @@
 module OkuribitoDb
   class SnapTableInfo
     def self.snap
+      adapter = Rails.configuration.database_configuration[Rails.env]["adapter"]
+      unless adapter == "mysql2"
+        puts "Sorry, OkuribitoDB don't support #{adapter}"
+        return
+      end
+
       db_info = create_db_info
       table_infos.each { |table_info| create_table_info(table_info, db_info) }
     end
