@@ -9,10 +9,11 @@
   color: #333;
   background-color: #eee;
   border: 1px solid #b9b9b9;
+  font-size: 0.8em
 }
 .db_info td {
   padding: 6px;
   background-color: #fff;
   border: 1px solid #b9b9b9;
-  font-size: 0.9em
+  font-size: 0.8em
 }
